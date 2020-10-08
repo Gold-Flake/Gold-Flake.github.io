@@ -102,12 +102,13 @@
 				myGameArea.clear();
 				snakeHead.newPos();
                 snakeHead.update();
-                edibleClass.update();
+                
                 snakeHead.passLocation();
                 if(edibleClass != null && snakeHead.x == edibleClass.x && snakeHead.y == edibleClass.y) {
                     eatClass();
                 }
-
+		edibleClass.update();
+					
                 score.innerHTML = "Remaining Classes: <b>" + remainingClasses.length + "</b"; 
                 
                 if(outOfBounds() || isTouchingBody()) {
